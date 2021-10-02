@@ -1,0 +1,21 @@
+{
+  "name": "zeet",
+  "version": "1.0.0",
+  "description": "full stack web tool",
+  "main": "server.js",
+  "scripts": {
+    "go": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThamerAyachi/zeet-librairie.git"
+  },
+  "author": "Thamer Ayachi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
