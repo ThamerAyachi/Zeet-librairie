@@ -6,6 +6,7 @@ const port = 3000;
 
 // Route of static fille
 app.use("/static", express.static(path.resolve(__dirname, "src", "frontend")));
+app.use("/packages", express.static(path.resolve(__dirname, "src", "Packages")));
 
 app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "public", "index.html"));

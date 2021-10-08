@@ -1,3 +1,6 @@
+import Home from "./views/Home.js";
+import About from "./views/About.js"
+
 const NavigateTo = url => {
     history.pushState(null, null, url);
     router();
@@ -5,9 +8,8 @@ const NavigateTo = url => {
 
 const router = async () => {
     const routes = [
-        { path: "/", view: () => console.log('home page ') },
-        { path: "/posts", view: () => console.log('posts page ') },
-        { path: "/settings", view: () => console.log('settings page ') },
+        { path: "/", view: Home },
+        { path: "/about", view: About },
     ];
 
     // Test each route for potential match 
@@ -26,12 +28,17 @@ const router = async () => {
         }
     }
 
-    console.log(match.route.view());
+    const view = new match.route.view();
+
+    document.querySelector("#app").innerHTML = await view.getHtml();
+
 };
+
+window.addEventListener("popstate", router);
 
 document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', e => {
-        if(e.target.matches('[data-link]')){
+        if(e.target.matches('[z-link]')){
             e.preventDefault();
             NavigateTo(e.target.href);
         }
