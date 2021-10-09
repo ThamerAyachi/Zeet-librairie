@@ -1,5 +1,5 @@
-import Home from "./views/Home.js";
-import About from "./views/About.js"
+import  Routes  from "./routes.js";
+import Assets from "./assets/index.js";
 
 const NavigateTo = url => {
     history.pushState(null, null, url);
@@ -7,10 +7,11 @@ const NavigateTo = url => {
 }
 
 const router = async () => {
-    const routes = [
-        { path: "/", view: Home },
-        { path: "/about", view: About },
-    ];
+
+    // get routes
+    const routes = await new Routes().getRoutes();
+    // get assets Fills
+    const assets = await new Assets().getAssets();
 
     // Test each route for potential match 
     const potentialMatches = routes.map(route => {
