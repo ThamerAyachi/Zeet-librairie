@@ -15,6 +15,8 @@ export default class {
     </ul>
         
             ${await this.routerLink}
+
+    <i> crate by Thamer </i>
         `;
     }
 }

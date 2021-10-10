@@ -1,6 +1,6 @@
 import  Routes  from "./routes.js";
 import Assets from "./assets/index.js";
-import app from "./app.js"; // kamel l app js kif trawa7 kont bech ta3mel l app feha kol l components 
+import app from "./app.js";
 
 const NavigateTo = url => {
     history.pushState(null, null, url);
@@ -31,6 +31,7 @@ const router = async () => {
         }
     }
 
+    // Add getHtml() function in app.js
     const view = new match.route.view();
     let RouterLink = new app();
     RouterLink.routerLink = await view.getHtml();
@@ -38,6 +39,7 @@ const router = async () => {
 
     document.querySelector("#app").innerHTML = await RouterLink.getHtml();
 
+    // for update class "active"
     const _view = new match.route.view();
     
 
