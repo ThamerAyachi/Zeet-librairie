@@ -1,15 +1,20 @@
-import AbstractView from "../Packages/AbstractView.js";
-
-export default class extends AbstractView {
+export default class {
     constructor() {
-        super();
     }
 
-    routerLink = "";
+    routerLink = "" ;
+
+    
 
     async getHtml(){
         return `
-            ${this.routerLink}
+
+    <ul class="nav">
+        <li><a href="/" z-link="" >Home</a></li>
+        <li><a href="/about" z-link="about">About</a></li>
+    </ul>
+        
+            ${await this.routerLink}
         `;
     }
 }
