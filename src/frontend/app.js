@@ -16,7 +16,7 @@ export default class {
         
             ${await this.routerLink}
 
-    <i> crate by Thamer </i>
+    <i> create by Thamer </i>
         `;
     }
 }
