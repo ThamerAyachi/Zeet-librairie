@@ -14,3 +14,7 @@ npm install -g nodemon
 ```
 nodemon server.js
 ```
+### And you can use this coomand after install nodemon Global 
+```
+npm start
+```

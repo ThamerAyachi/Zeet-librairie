@@ -1,5 +1,6 @@
 import  Routes  from "./routes.js";
 import Assets from "./assets/index.js";
+import app from "./app.js"; // kamel l app js kif trawa7 kont bech ta3mel l app feha kol l components 
 
 const NavigateTo = url => {
     history.pushState(null, null, url);
