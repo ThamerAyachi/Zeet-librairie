@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 
 // Route of static fille
 app.use("/static", express.static(path.resolve(__dirname, "src", "frontend")));
